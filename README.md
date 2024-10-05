@@ -23,12 +23,7 @@ The primary tasks are constructing word vectors using a context-window-based app
 - **Procedure**:
   1. Load the Brown corpus (`brown100k.txt`), convert words to lowercase, and create a vocabulary of the top 1000 most frequent words.
   2. Construct a term-term matrix where each row represents a word, and columns represent the context words within a window of `k=2`.
-  
-- **Questions to Answer**:
-  - What are the dimensions of your term-term matrix?
-  - Identify the 20 closest words to a chosen word using cosine similarity.
-  - Which two words in the vocabulary are the most similar and the most distinct? Does this make sense?
-
+ 
 ### Part 2: Skip-Grams and Negative Sampling
 - **Objective**: Perform a manual step of training a Word2Vec model with skip-gram and negative sampling using a toy example sentence: `"Cat litter smells bad"`.
 - **Steps**:
@@ -36,11 +31,6 @@ The primary tasks are constructing word vectors using a context-window-based app
   2. Calculate the initial loss function and update the vectors using stochastic gradient descent (SGD).
   3. Recalculate the loss function and plot the updated vectors.
   
-- **Questions to Answer**:
-  - Is the model correctly predicting context pairs after the first step?
-  - What changes occurred after the SGD step?
-  - How do these changes help build word embeddings that represent word similarity?
-
 ### Part 3: Evaluating Word2Vec
 
 #### Part 3a: Word Analogies
@@ -48,10 +38,6 @@ The primary tasks are constructing word vectors using a context-window-based app
 - **Procedure**:
   - Implement analogy solving by calculating vector differences, e.g., `vector_embedding(Greece) - vector_embedding(Athens) + vector_embedding(Baghdad)`.
   - Report accuracy based on different types of analogies (e.g., capitals of countries, currency, city-in-state).
-  
-- **Questions to Answer**:
-  - What is the overall accuracy by question type?
-  - Are there patterns in which types of analogies the model handles well versus poorly?
 
 #### Part 3b: TOEFL Synonym Test
 - **Objective**: Evaluate word embeddings using the TOEFL synonym dataset (`toefl.txt`), a multiple-choice test designed to assess knowledge of synonyms.
